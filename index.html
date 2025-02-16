@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
+
+
+
+
+<body>
+
+
+
+<div id="profile"> <!-- Profile start -->
+
+<div id="profile-header">
+    <div id="">
+        <span style="color: lightcoral;">BED&nbsp;</span><span style="color: lightgreen;">WARS</span>
+    </div>
+    <div id="profile-header-modeinfo">
+        Monthly | Quadruples
+    </div>
+    <div class="line"></div>
+    <div id="username-box">
+
+        <div id="input-wrapper">
+            <span id="hidden-span"></span>
+            <input type="text" spellcheck="false" autocomplete="off" id="username" placeholder="Username..." oninput="syncWidth(this)">
+        </div>
+
+
+
+        &nbsp; <button style=" height: 80%; width: 28px;" onclick="bedwars(usernameinput.value)"></button>
+    </div>
+</div> <!-- Profile Header end -->
+
+<div id="playermodel">
+    <div id="model">
+        <img id="model-image" src="default.png" alt="">
+    </div>
+    <div id="profile-bagdes">
+        
+        <div class="badge"></div>
+        <div class="badge"></div>    
+        <div class="badge"></div>
+    
+    </div>
+
+</div>
+
+<div id="profile-level">
+    <div id="progress-bar">
+    <div id="progressbar-size"></div>
+    <span id="level-text">Level: <span id="level-value">0</span></span>
+    </div>
+</div>
+
+<div id="profile-lastseen">
+    <div class="textpad">
+        Last <br>
+        Online
+    </div>
+    <div class="textpad" id="lastseen-value">
+        <span id="lastseen-date">0/0/0</span> <br>
+        <span id="lastseen-time">0 days ago</span>
+    </div>
+</div>
+
+
+</div> <!-- Profile end -->
+
+<div id="stats"> <!-- Stats start -->
+<div id="statsgrid"> <!-- Stats grid start -->
+
+<div class="statbox">
+    <div class="statbox-header">
+        Wins
+        <div>(#<span id="wins-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="wins-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Loss
+        <div>(#<span id="loss-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="loss-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-ratio-header">
+        WLR
+        <div id="wlr-value">0.00</div>
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        F-Kills
+        <div>(#<span id="fkills-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="fkills-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        F-Deaths
+        <div>(#<span id="fdeaths-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="fdeaths-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-ratio-header">
+        FKDR
+        <div id="fkdr-value">0.00</div>
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Kills
+        <div>(#<span id="kills-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="kills-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Deaths
+        <div>(#<span id="deaths-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="deaths-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-ratio-header">
+        KDR
+        <div id="kdr-value">0.00</div>
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Beds
+        <div>(#<span id="beds-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="beds-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Arrows
+        <div>(#<span id="arrows-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="arrows-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-ratio-header">
+        AHR
+        <div id="ahr-value">0.00</div>
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Winstreak
+        <div>(#<span id="winstreak-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="winstreak-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-header">
+        Games
+        <div>(#<span id="games-position">0</span>)</div>
+    </div>
+    <div class="statbox-value" id="games-value">
+        0
+    </div>
+</div>
+
+<div class="statbox">
+    <div class="statbox-ratio-header">
+        HUBS
+        <div id="hubs-value">0.00</div>
+    </div>
+</div>
+
+
+
+</div> <!-- Stats grid end -->
+
+<div class="line"></div>
+
+<div id="guild">
+    <div class="textpad" id="guildinfo">
+        <div id="guildtext">
+            <span style="color: lightcoral;">GUILD</span><br><span style="color: lightgreen;">INFO</span>
+        </div>
+        <div id="guildnames">
+            <span id="guildname">?</span><br>
+            [<span id="guildtag"></span>]
+            
+        </div>
+    </div>
+
+    <div class="textpad" id="guildlevel">
+        Level: <span id="glevel-value">0</span><br>
+        Members: <span id="gmembers-value">0</span>
+    </div>
+
+
+</div>
+
+</div> <!-- Stats end -->
+
+
+
+</body>
+
+
+
+
+</html>

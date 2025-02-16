@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.progress-container {
+    width: 300px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.progress-bar {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    font-size: 16px;
+    mix-blend-mode: difference; /* Inverts text color based on background */
+    color: white; /* Default text color */
+    z-index: 2;
+}
+
+
+</style>
+
+
+
+
+<body>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <span class="progress-text" id="progress-text">Level: 50</span>
+    </div>
+    
+    <input type="range" min="0" max="100" value="50" id="progress-input">
+    
+    
+</body>
+</html>
+
+
+
+<script>
+    
+    const progressBar = document.getElementById('progress-bar');
+const progressText = document.getElementById('progress-text');
+const progressInput = document.getElementById('progress-input');
+
+progressInput.addEventListener('input', function () {
+    let progressValue = this.value;
+
+    // Update bar width
+    progressBar.style.width = progressValue + "%";
+
+    // Update text
+    progressText.textContent = 'Level: ' + progressValue;
+});
+
+    
+    
+    </script>
