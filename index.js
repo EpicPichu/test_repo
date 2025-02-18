@@ -4,8 +4,6 @@ function syncWidth(input) {
     input.style.width = span.offsetWidth + "px";
 }
 
-let modeinfo, usernameinput, lastseen_date, lastseen_time, winsp, winsv, lossp, lossv, wlrv, fkillsp, fkillsv, fdeathsp, fdeathsv, fkdrv, killsp, killsv, deathsp, deathsv, kdrv, bedsp, bedsv, arrowsp, arrowsv, ahrv, hwsp, hwsv, gamesp, gamesv, hubsv;
-
 document.addEventListener('DOMContentLoaded', function() {
     modeinfo = document.getElementById('profile-header-modeinfo');
     usernameinput = document.getElementById('username');
